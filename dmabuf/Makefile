@@ -6,11 +6,6 @@ SRCDIR=	${.CURDIR:H}/drivers/dma-buf
 
 KMOD=	dmabuf
 SRCS=	dma-buf-kmod.c \
-	dma-buf.c \
-	dma-fence-array.c \
-	dma-fence-chain.c \
-	dma-fence.c \
-	dma-resv.c \
 	sync_file.c
 
 SRCS+=	device_if.h \
