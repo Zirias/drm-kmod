@@ -1,3 +1,5 @@
+#if 0
+/* #if __FreeBSD_version < XXXXXX */
 /*-
  * Copyright (c) 2022 Beckhoff Automation GmbH & Co. KG
  *
@@ -51,3 +53,6 @@ void dma_fence_chain_init(struct dma_fence_chain *chain, struct dma_fence *prev,
   struct dma_fence *fence, uint64_t seqno);
 
 #endif /* _LINUX_DMA_FENCE_CHAIN_H_ */
+#else
+#include_next <linux/dma-fence-chain.h>
+#endif

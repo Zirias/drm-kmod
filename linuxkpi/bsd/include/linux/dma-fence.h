@@ -1,3 +1,5 @@
+#if 0
+/* #if __FreeBSD_version < XXXXXX */
 /*-
  * Copyright (c) 2022 Beckhoff Automation GmbH & Co. KG
  *
@@ -133,4 +135,7 @@ signed long dma_fence_wait(struct dma_fence *fence, bool intr);
 	do {				\
 	} while (0)
 
+#endif
+#else
+#include_next <linux/dma-fence.h>
 #endif

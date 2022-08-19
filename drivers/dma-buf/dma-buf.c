@@ -1,3 +1,5 @@
+#if 0
+/* #if __FreeBSD_version < XXXXXX */
 /*-
  * Copyright (c) 2016 Matt Macy (mmacy@nextbsd.org)
  * All rights reserved.
@@ -627,3 +629,5 @@ dma_buf_uninit(void *arg __unused)
 
 SYSINIT(dma_buf, SI_SUB_DRIVERS, SI_ORDER_SECOND, dma_buf_init, NULL);
 SYSUNINIT(dma_buf, SI_SUB_DRIVERS, SI_ORDER_SECOND, dma_buf_uninit, NULL);
+
+#endif

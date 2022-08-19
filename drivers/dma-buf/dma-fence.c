@@ -1,3 +1,5 @@
+#if 0
+/* #if __FreeBSD_version < XXXXXX */
 /*-
  * Copyright (c) 2022 Beckhoff Automation GmbH & Co. KG
  *
@@ -603,3 +605,4 @@ dma_fence_wait(struct dma_fence *fence, bool intr)
 
 	return (ret < 0 ? ret : 0);
 }
+#endif

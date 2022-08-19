@@ -1,3 +1,5 @@
+#if 0
+/* #if __FreeBSD_version < XXXXXX */
 /*
  * Header file for reservations for dma-buf and ttm
  *
@@ -303,3 +305,6 @@ long dma_resv_wait_timeout_rcu(struct dma_resv *obj, bool wait_all, bool intr,
 bool dma_resv_test_signaled_rcu(struct dma_resv *obj, bool test_all);
 
 #endif /* _LINUX_RESERVATION_H */
+#else
+#include_next <linux/dma-resv.h>
+#endif

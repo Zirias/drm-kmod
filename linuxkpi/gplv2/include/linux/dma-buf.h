@@ -1,3 +1,5 @@
+#if 0
+/* #if __FreeBSD_version < XXXXXX */
 /*
  * Header file for dma buffer sharing framework.
  *
@@ -180,3 +182,6 @@ void *dma_buf_vmap(struct dma_buf *);
 void dma_buf_vunmap(struct dma_buf *, void *vaddr);
 
 #endif /* _LINUX_GPLV2_DMA_BUF_H_ */
+#else
+#include_next <linux/dma-buf.h>
+#endif

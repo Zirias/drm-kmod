@@ -1,3 +1,5 @@
+#if 0
+/* #if __FreeBSD_version < XXXXXX */
 /*-
  * Copyright (c) 2022 Beckhoff Automation GmbH & Co. KG
  *
@@ -51,3 +53,6 @@ struct dma_fence_array *dma_fence_array_create(int num_fences,
     bool signal_on_any);
 
 #endif /* _LINUX_DMA_FENCE_ARRAY_H_ */
+#else
+#include_next <linux/dma-fence-array.h>
+#endif
