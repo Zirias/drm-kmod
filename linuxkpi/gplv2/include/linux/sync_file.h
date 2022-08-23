@@ -1,3 +1,5 @@
+#if 0
+/* #if __FreeBSD_version < XXXXXX */
 /*
  * include/linux/sync_file.h
  *
@@ -63,3 +65,7 @@ struct dma_fence *sync_file_get_fence(int fd);
 char *sync_file_get_name(struct sync_file *sync_file, char *buf, int len);
 
 #endif /* _LINUX_SYNC_H */
+#else
+#include_next <linux/sync_file.h>
+#endif
+

@@ -1,3 +1,5 @@
+#if 0
+/* #if __FreeBSD_version < XXXXXX */
 /* SPDX-License-Identifier: GPL-1.0+ WITH Linux-syscall-note */
 /*
  * Copyright (C) 2012 Google, Inc.
@@ -96,3 +98,6 @@ struct sync_file_info {
 #define SYNC_IOC_FILE_INFO	_IOWR(SYNC_IOC_MAGIC, 4, struct sync_file_info)
 
 #endif /* _UAPI_LINUX_SYNC_H */
+#else
+#include_next <uapi/linux/sync_file.h>
+#endif

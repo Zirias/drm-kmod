@@ -113,5 +113,8 @@ MODULE_VERSION(ttm, 1);
 MODULE_DEPEND(ttm, drmn, 2, 2, 2);
 MODULE_DEPEND(ttm, linuxkpi, 1, 1, 1);
 MODULE_DEPEND(ttm, linuxkpi_gplv2, 1, 1, 1);
+#if 0
+/* #if __FreeBSD_version < XXXXXX */
 MODULE_DEPEND(ttm, dmabuf, 1, 1, 1);
+#endif
 #endif

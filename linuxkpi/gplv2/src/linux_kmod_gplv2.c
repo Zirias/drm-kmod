@@ -32,6 +32,9 @@ __FBSDID("$FreeBSD$");
 
 MODULE_VERSION(linuxkpi_gplv2, 1);
 MODULE_DEPEND(linuxkpi_gplv2, backlight, 1, 1, 1);
+#if 0
+/* #if __FreeBSD_version < XXXXXX */
 MODULE_DEPEND(linuxkpi_gplv2, dmabuf, 1, 1, 1);
+#endif
 MODULE_DEPEND(linuxkpi_gplv2, firmware, 1, 1, 1);
 MODULE_DEPEND(linuxkpi_gplv2, linuxkpi, 1, 1, 1);

@@ -1,3 +1,5 @@
+#if 0
+/* #if __FreeBSD_version < XXXXXX */
 // SPDX-License-Identifier: GPL-2.0-only
 /*
  * drivers/dma-buf/sync_file.c
@@ -490,3 +492,4 @@ static const struct file_operations sync_file_fops = {
 	.compat_ioctl = sync_file_ioctl,
 #endif
 };
+#endif
